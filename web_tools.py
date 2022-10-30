@@ -833,6 +833,8 @@ class Twitter_Session:
             hastags : list[str] - Hashtags to include in the Tweet.
 
             mentions : list[str] - Usernames to mention in the Tweet. May include '@' or not.
+
+            emojis : list[str] - Emojis to include in the post. Can be markup shortcode or keyword.
         """
 
         self.get_url(
