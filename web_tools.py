@@ -828,7 +828,7 @@ class Twitter_Session:
 
         Parameters:
 
-            schema : str - One of 'reading', 'programming', 'watching', 'researching'.
+            schema : str - One of 'reading', 'programming', 'watching', 'researching', 'listening'.
 
             hastags : list[str] - Hashtags to include in the Tweet.
 
