@@ -837,7 +837,9 @@ class Twitter_Session:
             emojis : list[str] - Emojis to include in the post. Can be markup shortcode or keyword.
         """
 
-        self.get_url(
+        # TODO test session.post function schema
+
+        self.post_url(
             url=f'',
         )
 
