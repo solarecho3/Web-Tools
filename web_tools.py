@@ -829,6 +829,10 @@ class Twitter_Session:
         Parameters:
 
             schema : str - One of 'reading', 'programming', 'watching', 'researching'.
+
+            hastags : list[str] - Hashtags to include in the Tweet.
+
+            mentions : list[str] - Usernames to mention in the Tweet. May include '@' or not.
         """
 
         self.get_url(
