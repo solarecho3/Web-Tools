@@ -111,11 +111,46 @@ class Twitter_Session:
 
         except requests.exceptions.MissingSchema:
 
-            # print(sys.exc_info())
-
             self.response = self.session.get(
                 url=f"https://{url}",
                 headers={"Authorization": f"Bearer {self.token}"},
+                stream=False,
+            )
+
+    def post_url(self, url: str, **kw):
+
+        """
+        Simple HTTP POST request.
+        
+        #### Parameters
+
+            url : str - The complete URL, with or without a scheme. If no scheme is specified, defaults to 'https://'.
+
+            optional kwargs : dict - headers, params, json, data
+
+        #### Attributes
+
+            self.response : Response - The complete requests.response object, set to the class variable response.
+        """
+
+        try:
+
+            self.response = self.session.post(
+                url,
+                headers=kw.get('oauth', False),
+                params=kw.get('params', False),
+                json=kw.get('json', False),
+                data=kw.get('data', False),
+            )
+
+        except requests.exceptions.MissingSchema:
+
+            self.response = self.session.post(
+                url=f"https://{url}",
+                headers=kw.get('oauth', False),
+                params=kw.get('params', False),
+                json=kw.get('json', False),
+                data=kw.get('data', False),
                 stream=False,
             )
 
@@ -782,6 +817,23 @@ class Twitter_Session:
         processed_list = [x for x in l if x is not None]
 
         return processed_list
+
+    def tweet_log(self):
+
+        """
+        Tweet a log event of a specified schema.
+
+        Endpoint URL: https://api.twitter.com/2/tweets
+        Twitter Doc: https://developer.twitter.com/en/docs/twitter-api/tweets/manage-tweets/api-reference/post-tweets
+
+        Parameters:
+
+            schema : str - One of 'reading', 'programming', 'watching', 'researching'.
+        """
+
+        self.get_url(
+            url=f'',
+        )
 
 
 @dataclass
