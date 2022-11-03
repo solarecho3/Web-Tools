@@ -1,3 +1,4 @@
 __pycache__/
 keys.json
 data/twitter_queries.db
+.gitignore
