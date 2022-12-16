@@ -859,7 +859,7 @@ class Database_Functions:
         for i in files:
 
             engine = sqlalchemy.create_engine(
-                f"sqlite+pysqlite:///{i}", echo=True, future=True
+                f"sqlite+pysqlite:///{i}", echo=False, future=True
             )
 
             s = sqlalchemy.schema.MetaData(bind=engine)
