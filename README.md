@@ -8,6 +8,12 @@
 
 + 🍗 Documentation: https://github.com/solarecho3/web-tools  >  documentation  >  web_tools.htm
 
+++ web_tools.py - The main module.
+
+++ how_to.ipynb - How to use web_tools.py.
+
+++ keyword_snapshot.py - Command-line module to capture Twitter samples.
+
 - ⚔️ A line from the bard? "Therefore no more turn me to him, sweet Nan." 🤺
 
     ### Example
